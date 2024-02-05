@@ -1,0 +1,10 @@
+배너 이미지 넣는 방법 참고
+https://velog.io/@jytrack/5%EC%9B%94-30%EC%9D%BCReact-%EC%87%BC%ED%95%91%EB%AA%B0-%EB%A7%8C%EB%93%A4%EA%B8%B0
+
+
+.main-bg {
+    height: 300px;
+    background-image: url('./mv.png');
+    background-size: cover;
+    background-position: center;
+  }

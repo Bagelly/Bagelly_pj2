@@ -1,0 +1,16 @@
+메뉴가 옆으로 정렬이 되지 않는 css 가 안먹혔던 이유는 Header.js에 
+className을 class Name으로 해서 그 밑으로는 아예 안먹혔던 것
+
+링크 걸린 텍스트에 색이 다르고 밑줄 쳐진 것 해결 하기 위해 className을 달아
+css에서 
+.link {
+    color: inherit;
+    text-decoration: none; /* 링크 텍스트 색상 유지,텍스트 속성 변경 하지 않도록 하는 */
+}
+
+설정 해 줬는데 안됐던 이유는 
+<nav className={styles.navigation}> --->이것과
+                    
+<Link className="home-link" to="/Order">주문 </Link>--->이것의 형식이 달라서 
+
+<Link className={styles.link} to="/">Bagelly </Link> -->이렇게 바꿨더니 됐다!!

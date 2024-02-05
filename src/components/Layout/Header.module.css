@@ -1,0 +1,38 @@
+
+.header {
+    position: fixed; /*스크롤이 길어져도 상단에 고정시키기 위함 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #dde0ea;
+
+}
+
+.contents {
+    display: flex; /* 로고로부터 메뉴바까지의 길이를 조정하고 좌우로 붙을 수 있도록 함. */
+    width: 96%;
+    max-width: 1100px;
+    height: 100%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.link {
+    color: inherit;
+    text-decoration: none; /* 링크 텍스트 색상 유지,텍스트 속성 변경 하지 않도록 하는 */
+}
+
+.navigation {
+    ul {
+        display: flex;
+        list-style: none;
+
+        li + li { 
+            margin-left: 30px;
+
+        }
+    }
+}

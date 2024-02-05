@@ -1,16 +1,15 @@
+**배너 이미지 두 개 뜨는 오류**
+기본 화면에도 배너 두개 주문화면에 배너 하나 이렇게 떴었음.
+<Home /> 삭제하니 됐음. 헤더 밑에 배너가 있으면 된다는 생각에 
+헤더 밑에 홈을 넣었던 건데... Home이 기본 리소스(/)이니까 안넣어도 되는 것 같음.
+
 import React from 'react';
-//import { useState } from 'react';
 import Home from './pages/Home';
 import Order from './pages/Order';
 import Layout from './components/Layout/Layout';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-
-//const API_ENDPOINT ='https://5uofg1te62.execute-api.ap-southeast-2.amazonaws.com/SH'
-
-
 function App() {
-
     return (
         <BrowserRouter>
                 <div className="App">
@@ -19,7 +18,7 @@ function App() {
                         <Route path="/" element={<Home />} />
                         <Route path="/Order" element={<Order />} />
                     </Routes>
-                    
+                    <Home /> *** 배너 이미지가 두 개 떠서 고민. 이 코드를 없애면 됐음.
                  </div>
         </BrowserRouter>
                         
@@ -27,7 +26,8 @@ function App() {
         
     );
 
-    }
 
 
-export default App;
+}
+
+export default App
